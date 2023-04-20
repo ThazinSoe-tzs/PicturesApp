@@ -1,33 +1,36 @@
 package com.tzs.picturesapp.view.fragment
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.tzs.picturesapp.R
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import com.tzs.picturesapp.databinding.FragmentPictureInfoBinding
 import com.tzs.picturesapp.viewmodel.PictureInfoViewModel
 
 class PictureInfoFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PictureInfoFragment()
-    }
-
-    private lateinit var viewModel: PictureInfoViewModel
+    private lateinit var binding: FragmentPictureInfoBinding
+    private var picID = 0
+    private val args: PictureInfoFragmentArgs by navArgs()
+    private val viewModel: PictureInfoViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_picture_info, container, false)
+        binding = FragmentPictureInfoBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(PictureInfoViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        picID = args.pictureID
+        Toast.makeText(context, "Pic ID $picID", Toast.LENGTH_SHORT).show()
+        //viewModel.loadDetailsMovie(movieId)
     }
 
 }

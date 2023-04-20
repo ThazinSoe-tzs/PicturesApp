@@ -17,8 +17,7 @@
         android:name="com.tzs.picturesapp.view.fragment.PictureInfoFragment"
         android:label="PictureInfoFragment" >
         <argument
-            android:name="argPhoto"
-            app:argType="com.tzs.picturesapp.model.data.model.Photo"
-            />
+            android:name="pictureID"
+            app:argType="integer" />
     </fragment>
 </navigation>

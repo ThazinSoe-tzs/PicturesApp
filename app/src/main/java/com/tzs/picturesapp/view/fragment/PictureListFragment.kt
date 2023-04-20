@@ -48,7 +48,7 @@ class PictureListFragment : Fragment() {
             }
 
             photoAdapter.setOnItemClickListener {
-                val direction = PictureListFragmentDirections.actionPictureListFragmentToPictureInfoFragment(it)
+                val direction = PictureListFragmentDirections.actionPictureListFragmentToPictureInfoFragment(it.id.toInt())
                 findNavController().navigate(direction)
             }
 
