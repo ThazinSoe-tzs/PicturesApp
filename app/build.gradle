@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -68,6 +69,7 @@ dependencies {
 
     //Navigation Graph
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
     //Image loading
     implementation 'io.coil-kt:coil:1.4.0'
@@ -83,4 +85,5 @@ dependencies {
 // Allow references to generated code
 kapt {
     correctErrorTypes true
+    generateStubs = true
 }
