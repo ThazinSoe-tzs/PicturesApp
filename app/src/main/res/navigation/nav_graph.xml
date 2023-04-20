@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pictureListFragment">
+
+    <fragment
+        android:id="@+id/pictureListFragment"
+        android:name="com.tzs.picturesapp.view.fragment.PictureListFragment"
+        android:label="PictureListFragment" >
+        <action
+            android:id="@+id/action_pictureListFragment_to_pictureInfoFragment"
+            app:destination="@id/pictureInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pictureInfoFragment"
+        android:name="com.tzs.picturesapp.view.fragment.PictureInfoFragment"
+        android:label="PictureInfoFragment" />
+</navigation>
