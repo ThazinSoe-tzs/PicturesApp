@@ -41,7 +41,7 @@ class PhotoAdapter @Inject() constructor() :
                 ivPic.load(item.downloadUrl) {
                     crossfade(true)
                     placeholder(R.drawable.ic_baseline_image_24)
-                    scale(Scale.FIT)
+                    scale(Scale.FILL)
                 }
 
                 root.setOnClickListener {

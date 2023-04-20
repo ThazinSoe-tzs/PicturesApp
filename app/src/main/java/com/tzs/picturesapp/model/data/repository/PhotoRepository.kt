@@ -8,4 +8,7 @@ class PhotoRepository @Inject constructor(
 ) {
     suspend fun getPhotoList(page: Int) =
         photoService.getPhotos(page)
+
+    suspend fun getPhotoInfo(id: Int) =
+        photoService.getPhotoInfo(id)
 }

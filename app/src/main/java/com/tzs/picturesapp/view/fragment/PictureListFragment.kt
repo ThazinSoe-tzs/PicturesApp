@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -13,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.GridLayoutManager
 import com.tzs.picturesapp.databinding.FragmentPictureListBinding
-import com.tzs.picturesapp.model.data.model.Photo
 import com.tzs.picturesapp.view.adapter.LoadMoreAdapter
 import com.tzs.picturesapp.view.adapter.PhotoAdapter
 import com.tzs.picturesapp.viewmodel.PictureListViewModel

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PicturesApp</string>
     <string name="retry">Retry</string>
+    <string name="normal">Normal</string>
+    <string name="blur">Blur</string>
+    <string name="grayscale">Grayscale</string>
 </resources>
